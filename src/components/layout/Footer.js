@@ -8,7 +8,7 @@ const Footer = () => (
         <p className="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
       </div>
       <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Important Links</h2>
+        <h2 className="text-lg font-semibold">Links</h2>
         <ul className="mt-4 leading-loose">
           <li>
             <a href="https://codebushi.com">Terms &amp; Conditions</a>
