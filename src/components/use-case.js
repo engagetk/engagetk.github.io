@@ -12,15 +12,19 @@ export default ({ article }) => {
   return <div>
   {/* <div className={styles.preview}> */}
     {/* <Img alt="" fluid={article.heroImage.fluid} /> */}
+    <Link to={`/use-case/${article.slug}`}>
     <div className={heroStyles.hero}>
     <GatsbyImage
               image={image}
               className={heroStyles.heroImage}
               alt={article.title} />
           </div>
+    </Link>
+    <div className="text-center">
     <h3 className={styles.previewTitle}>
       <Link to={`/use-case/${article.slug}`}>{article.headline.headline}</Link>
     </h3>
+    </div>
     {/* <small>{article.publishDate}</small> */}
     {/* <p
       dangerouslySetInnerHTML={{

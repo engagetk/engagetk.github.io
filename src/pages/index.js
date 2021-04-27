@@ -31,6 +31,7 @@ class RootIndex extends React.Component {
     const mainHeroImage = getImage(mainAssets[0].node.cassieHero);
     const whoIsCassieImage = getImage(mainAssets[0].node.whoIsCassie);
     const airportHeroImage = getImage(mainAssets[0].node.airportHero);
+    const officeMapImage = getImage(mainAssets[0].node.officeMap);
     const cassieDescription = mainContent[0].node.cassieDescription;
     const airportDescription = mainContent[0].node.airport;
 
@@ -74,7 +75,7 @@ class RootIndex extends React.Component {
         </section>
         <div className="container mx-auto mx-12 my-12">
           {/* <Card className="mb-8"> */}
-            <p className="mt-4"
+            <div className="mt-4 mx-8"
             dangerouslySetInnerHTML={{
             __html: cassieDescription.childMarkdownRemark.html,
             }} />
@@ -167,9 +168,8 @@ class RootIndex extends React.Component {
             <li className="pt-4 pb-4 border-b border-gray-200">Listening and translation from 20+ languages to Cued English</li>
             <li className="pt-4 pb-4 border-b border-gray-200">Engagement dashboard to understand your visitors</li>
           </ul>
-          <button className=" uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 font-bold text-primary-very-light rounded-md" >Learn More</button>
+          {/* <button className=" uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 font-bold text-primary-very-light rounded-md" >Learn More</button> */}
         </article>
-        {/* <article className="lg:w-custom w-4/5 mb-10 px-6 py-16 lg:-mt-1 text-white text-center rounded-lg" > */}
         <article className="bg-white w-4/5 lg:w-custom mb-10 ml-2 mr-2 lg:px-4 px-6 py-10 text-center text-primary-dark rounded-lg">
           <h5 className="font-bold text-base ">Silver</h5>
           <h2 className="font-bold pb-4 flex justify-center"> <span className="text-3xl mt-6 mr-1">£</span><span className="text-6xl "> 999</span></h2>
@@ -181,7 +181,7 @@ class RootIndex extends React.Component {
             <li className="pt-4 pb-4 border-b border-gray-200">Engagement dashboard to understand your visitors</li>
             <li className="pt-4 pb-4 border-b border-gray-200">Reservations and bookings</li>
           </ul>
-          <button className="uppercase text-center text-sm mt-10 xl:px-24 px-12 sm:px-16 py-2 rounded-md font-bold bg-primary-very-light text-primary-blue" >Learn More</button>
+          {/* <button className="uppercase text-center text-sm mt-10 xl:px-24 px-12 sm:px-16 py-2 rounded-md font-bold bg-primary-very-light text-primary-blue" >Learn More</button> */}
 
         </article>
         <article className="bg-white w-4/5 lg:w-custom mb-10 ml-2 mr-2 lg:px-4 px-6 py-10 text-center text-primary-dark rounded-lg">
@@ -197,9 +197,16 @@ class RootIndex extends React.Component {
             <li className="pt-4 pb-4 border-b border-gray-200">Take payments, make purchases</li>
             <li className="pt-4 pb-4 border-b border-gray-200">Click and collect</li>
           </ul>
-          <button className="uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 rounded-md font-bold text-primary-very-light" >Learn More</button>
+          {/* <button className="uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 rounded-md font-bold text-primary-very-light" >Learn More</button> */}
         </article>
       </section>
+
+      <div className="w-full px-12">
+        <h2>Find Us</h2>
+         <GatsbyImage
+              image={officeMapImage}
+              alt="Office Map" />
+      </div>
 
         {/* <div style={{ background: '#fff' }}> */}
           {/* <Helmet title={siteTitle} />
@@ -568,6 +575,9 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
           airportHero {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          }
+          officeMap {
             gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
